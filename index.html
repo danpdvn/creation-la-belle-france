@@ -37,7 +37,7 @@
             <input id="mail" class="w3-input" type="text" placeholder="Votre Email" required name="Email">
             <input id="subject_mail" class="w3-input" type="text" placeholder="Votre Message" required name="Message">
             <br>
-            <button id="send_mail" class="w3-button w3-black" type="submit">Envoyer</button>
+            <button id="send_mail" class="w3-button w3-black" type="submit" onclick="sendEmail()">Envoyer</button>
             </form>
             <p></p>
         </div>
@@ -51,8 +51,6 @@
                 body = 'ADDRESSE DE REPONSE : ' + mail + '\n' + subject_mail;
                 window.location = 'mailto:crea.lbf@gmail.com?subject=' + encodeURIComponent(subject) +'&body=' + encodeURIComponent(body);
             };
-            var button = document.getElementById('send_mail');
-            button.addEventListener('click', sendEmail);
         </script>
 
         <div id="members" class="w3-container w3-padding-32">
