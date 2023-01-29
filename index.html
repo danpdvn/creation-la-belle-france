@@ -44,9 +44,9 @@
         <script>
             var sendEmail = function(){
                 var subject, subject_mail, mail, cli_name, body;
-                cli_name = document.getElementById('name').textContent;
-                mail = document.getElementById('mail').textContent;
-                subject_mail = document.getElementById('subject_mail').textContent;
+                cli_name = document.getElementById('name').value;
+                mail = document.getElementById('mail').value;
+                subject_mail = document.getElementById('subject_mail').value;
                 subject = "Demande d'informations de M/Mme " + cli_name;
                 body = 'ADDRESSE DE REPONSE : ' + mail + '\n' + subject_mail;
                 window.location = 'mailto:crea.lbf@gmail.com?subject=' + encodeURIComponent(subject) +'&body=' + encodeURIComponent(body);
