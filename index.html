@@ -32,31 +32,21 @@
             Email: crea.lbf@gmail.com<br>
             <p class="w3-opacity w3-center"><i>Expliquez-nous votre projet!</i></p>
             
-            <form action="/action_page.php" target="_blank">
-            <input id="name" class="w3-input" type="text" placeholder="Votre Nom" required name="Name">
-            <input id="mail" class="w3-input" type="text" placeholder="Votre Email" required name="Email">
-            <input id="subject_mail" class="w3-input" type="text" placeholder="Votre Message" required name="Message">
-            <br>
-            <button id="send_mail" class="w3-button w3-black" type="submit" onclick="sendEmail()">Envoyer</button>
+            <form action="mailto:crea.lbf@gmail.com?&subject=Demande depuis site web" method="post" enctype="text/plain">
+            <input name="name" class="w3-input" type="text" placeholder="Votre Nom" required name="Name">
+            <input name="mail" class="w3-input" type="text" placeholder="Votre Email" required name="Email">
+            <input name="comment" size="200" class="w3-input" type="text" placeholder="Votre Message" required name="Message">
+            <br/>
+            <input type="submit" value="Envoyer">
+            <input type="reset" value="Effacer">
             </form>
-            <p></p>
+            <br/>
         </div>
-        <script>
-            var sendEmail = function(){
-                var subject, subject_mail, mail, cli_name, body;
-                cli_name = document.getElementById('name').value;
-                mail = document.getElementById('mail').value;
-                subject_mail = document.getElementById('subject_mail').value;
-                subject = "Demande d'informations de M/Mme " + cli_name;
-                body = 'ADDRESSE DE REPONSE : ' + mail + '\n' + subject_mail;
-                window.location = 'mailto:crea.lbf@gmail.com?subject=' + subject +'&body=' + body;
-            };
-        </script>
+        
 
         <div id="members" class="w3-container w3-padding-32">
             <div class="w3-row w3-center">
                 <img src="images/index/footer.png" class="w3-image" style="width:50%">
-                
             </div> 
         </div>
 
