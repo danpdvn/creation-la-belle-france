@@ -49,7 +49,7 @@
                 subject_mail = document.getElementById('subject_mail').value;
                 subject = "Demande d'informations de M/Mme " + cli_name;
                 body = 'ADDRESSE DE REPONSE : ' + mail + '\n' + subject_mail;
-                window.location = 'mailto:crea.lbf@gmail.com?subject=' + encodeURIComponent(subject) +'&body=' + encodeURIComponent(body);
+                window.location = 'mailto:crea.lbf@gmail.com?subject=' + encodeURI(subject) +'&body=' + encodeURI(body);
             };
         </script>
 
