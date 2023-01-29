@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="fr">
+    <meta charset="UTF-8">
+    <title>Création La Belle France</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css"> 
+    <style></style>
+    <script src="https://www.w3schools.com/lib/w3.js"></script> 
+
+    <body>
+        <div class="w3-content w3-display-container">
+            <img class="pix w3-center" src="../images/pages/projectcases/kitchen.JPG" alter="cuisine" width="100%">
+            <img class="pix w3-center" src="../images/pages/projectcases/living.JPG" alter="salon" width="100%">
+            <img class="pix w3-center" src="../images/pages/projectcases/shower.JPG" alter="salle de bain" width="100%">
+        
+            <!--carrousel factory-->
+            <div class="w3-center w3-display-center" style="width:100%">
+                <button class="w3-button w3-display-left w3-black" onclick="mySlide.previous()">&#10094</button>
+                <button class="w3-button w3-display-right w3-black" onclick="mySlide.next()">&#10095</button>
+            </div>
+            <script>
+                mySlide = w3.slideshow(".pix", 0);
+            </script>
+        </div>
+
+
+    </body>
