@@ -33,14 +33,28 @@
             <p class="w3-opacity w3-center"><i>Expliquez nous votre projet!</i></p>
             
             <form action="/action_page.php" target="_blank">
-            <input class="w3-input" type="text" placeholder="Votre Nom" required name="Name">
-            <input class="w3-input" type="text" placeholder="Votre Email" required name="Email">
-            <input class="w3-input" type="text" placeholder="Votre Message" required name="Message">
+            <input id="name" class="w3-input" type="text" placeholder="Votre Nom" required name="Name">
+            <input id="mail" class="w3-input" type="text" placeholder="Votre Email" required name="Email">
+            <input id="subject_mail" class="w3-input" type="text" placeholder="Votre Message" required name="Message">
             <br>
-            <button class="w3-button w3-black" type="submit">Envoyer</button>
+            <button id="send_mail" class="w3-button w3-black" type="submit">Envoyer</button>
             </form>
             <p></p>
         </div>
+        <script>
+            var sendEmail = function(){
+                var subject, subject_mail, mail, cli_name, body;
+                cli_name = document.getElementById('name');
+                mail = document.getElementById('mail');
+                subject_mail = document.getElementById('subject_mail');
+                subject = "Demande d'informations de M/Mme " + cli_name;
+                body = 'ADDRESSE DE REPONSE : ' + mail + '\n' + subject_mail;
+                window.location = 'mailto:crea.lbf@gmail.com?subject=' + encodeURIComponent(subject) +'&body=' + encodeURIComponent(body);
+            };
+            var button = document.getElementById('send_mail');
+            button.addEventListener('click', sendEmail);
+        </script>
+
         <div id="members" class="w3-container w3-padding-32">
             <div class="w3-row w3-center">
                 <img src="images/index/footer.png" class="w3-image" style="width:50%">
