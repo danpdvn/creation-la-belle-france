@@ -1,1 +1,2 @@
-Static github pages website for Creation La Bell France entreprise.
+# Welcome on static webpage repository for ![](images/index/logo_full.jpeg)
+
